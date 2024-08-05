@@ -1,4 +1,0 @@
-C:\Users\Nigel Ng\Downloads\PRG2\SWAD classes\SWAD classes\obj\Debug\net6.0\SWAD classes.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Nigel Ng\Downloads\PRG2\SWAD classes\SWAD classes\obj\Debug\net6.0\SWAD classes.AssemblyInfoInputs.cache
-C:\Users\Nigel Ng\Downloads\PRG2\SWAD classes\SWAD classes\obj\Debug\net6.0\SWAD classes.AssemblyInfo.cs
-C:\Users\Nigel Ng\Downloads\PRG2\SWAD classes\SWAD classes\obj\Debug\net6.0\SWAD classes.csproj.CoreCompileInputs.cache
