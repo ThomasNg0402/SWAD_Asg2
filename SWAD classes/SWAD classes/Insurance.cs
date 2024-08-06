@@ -11,30 +11,25 @@ namespace SWAD_classes
         private int insuranceId;
         private string provider;
         private string coverageDetails;
+        private int carId;
         public int InsuranceId { get; set; }
-        public string Provider { get; set; }
-        public string CoverageDetails { get; set; }
-        private CarOwner myCarOwner;
-        public CarOwner MyCarOwner
+        public string Provider { get; set; } = " ";
+        public string CoverageDetails { get; set; } = " ";
+        public int CarId { get; set;}
+        
+        public void add(int aCar)
         {
-            set
-            {
-                if (myCarOwner != value)
-                  {
-                    myCarOwner = value;
-                    value.MyCarInsurance = this;
-                }
-            }
-        }
-        public void add(string aCarOwner, int aCar)
-        {
-            this.aCarOwner = aCarOwner;
-            this.aCar += aCar;
+            this.CarId += aCar;
         }
 
-        public void addInsurance(CarOwner aCarOwner, Insurance aInsurance)
+        public void addInsurance(CarOwner aCarOwner, string provider, string coverageDetails, string startDate, string endDate)
         {
-            Registration aReg = new Registration(aInsurance, aCarOwner);
+            Registration aReg = new Registration();
+            aReg.StartDate = Convert.ToDateTime(startDate);
+            aReg.EndDate = Convert.ToDateTime(endDate);
+            aReg.CarOwner = aCarOwner;
+            this.provider = provider;
+            this.coverageDetails = coverageDetails;
         }
 
     }

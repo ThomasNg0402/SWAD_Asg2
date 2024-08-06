@@ -12,8 +12,9 @@ namespace SWAD_classes
         public int RegistrationId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        private CarOwner carowner;
+        private CarOwner carOwner;
         private Car car;
-
+        public CarOwner CarOwner { get { return carOwner; } set { this.CarOwner = value; } }
+        public Car Car { get { return car; } set { car = value; } }
     }
 }
