@@ -8,6 +8,9 @@ namespace SWAD_classes
 {
     class PrimeRenter : Renter
     {
-
+        public PrimeRenter(int userid, string name, string email, string contact,DateTime dob, string driverLicense, string address, string memberType) : base(userid, name, email, contact,dob, driverLicense, address, memberType)
+        {
+            this.MemberType = "Prime";
+        }
     }
 }
