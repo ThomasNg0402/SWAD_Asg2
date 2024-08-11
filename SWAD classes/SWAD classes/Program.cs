@@ -98,7 +98,7 @@ internal class Program
                                         Console.WriteLine("==============================");
                                         selectedCar = car;
                                         
-                                        currentBooking.updateBooking(selectedCar);
+                                        currentBooking.Car = selectedCar;
                                         selectedCar.addBooking(currentBooking);
                                         break;
                                     }

@@ -40,11 +40,6 @@ namespace SWAD_classes
             this.doorstepReturn = false;
         }
 
-        // Create Booking
-        public void updateBooking(Car car)
-        {
-            this.Car = car;
-        }
 
         public int getBookingLength()
         {
@@ -112,7 +107,7 @@ namespace SWAD_classes
                 string returnString = $"==============================\n" +
                    $"Booking {this.BookingId}\n\n" +
                    $"Renter: {this.Renter.Name}\n" +
-                   $"Status: {this.Status}" +
+                   $"Status: {this.Status}\n" +
                    $"Booking period: {this.getBookingLength()} Days\n" +
                    $"Car owner: {this.Car.Owner.Name}\n" +
                    $"Owner Contact No.: {this.Car.Owner.ContactNo}\n" +
