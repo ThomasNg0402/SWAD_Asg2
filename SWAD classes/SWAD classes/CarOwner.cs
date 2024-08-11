@@ -12,33 +12,32 @@ namespace SWAD_classes
         private Insurance myInsurance;
         public Insurance MyInsurance
         {
-            get { return myInsurance; } 
-            set { myInsurance = value; }
+            set
+            {
+                if (myInsurance != value)
+                  {
+                    myInsurance = value;
+                    value.MyCarOwner = this;
+                }
+            }
         }
-
-        public CarOwner(int userId, string name, string email, string contact) : base(userId, name, email, contact)
+        public void addInsurance(string aInsurance, int aCar)
         {
-            this.regList = new List<Registration>();
-            this.myInsurance = new Insurance();
-
+            this.aInsurance = aInsurance;
+            this.aCar += aCar;
         }
-        //public void addInsurance(string aInsurance, int aCar)
-        //{
-        //    this.aInsurance = aInsurance;
-        //    this.aCar += aCar;
-        //}
 
-        //public void addInsurance(Insurance aInsurance, Car aCar)
-        //{
-        //    bool ok = mayAddInsurance();
-        //    aInsurance.addInsurance(this);
-        //    aCar.addInsurance(this);
-        //}
+        public void addInsurance(Insurance aInsurance, Car aCar)
+        {
+            bool ok = mayAddInsurance();
+            aInsurance.addInsurance(this);
+            aCar.addInsurance(this);
+        }
 
-        //private bool mayAddInsurance()
-        //{
-        //    return true;
-        //}
+        private bool mayAddInsurance()
+        {
+            return true;
+        }
 
     }
 }
